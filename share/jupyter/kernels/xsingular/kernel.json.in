@@ -1,0 +1,13 @@
+{
+  "display_name": "@XEUS_SINGULAR_DISPLAY_NAME@",
+  "argv": [
+      "@XEUS_SINGULAR_KERNELSPEC_PATH@xsingular",
+      "-f",
+      "{connection_file}"
+  ],
+  "language": "singular",
+  "kernel_protocol_version": "5.6.0",
+  "metadata": {
+    "debugger": false
+  }
+}
