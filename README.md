@@ -2,7 +2,7 @@
 
 Jupyter kernel for [Singular](https://www.singular.uni-kl.de/) based on
 [xeus](https://github.com/jupyter-xeus/xeus). Runs natively (xeus-zmq) and in
-JupyterLite (xeus-lite, emscripten-forge). Port of
+JupyterLite (xeus-lite, emscripten-forge). Based on
 [jupyter_kernel_singular](https://github.com/sebasguts/jupyter_kernel_singular)
 and [PySingular](https://github.com/sebasguts/PySingular).
 
@@ -15,7 +15,7 @@ WebAssembly (emscripten-forge, emscripten 4.0.9): `xeus >=6.0,<6.1`,
 `xeus-lite >=5.0,<6`, `nlohmann_json`, `singular`, `libflint`, `ntl`, `gmp`,
 `mpfr`, `cddlib`, `mathicgb`, `mathic`, `memtailor`. libSingular and its
 dependencies are linked statically; `libflint` and `ntl` must match the
-versions `singular` was built with (3.6.0 and 11.6.0 for singular 4.4.1p5).
+versions `singular`.
 
 ## Build
 
@@ -69,7 +69,7 @@ message types, kernel info and error format. Changes:
 
 ## Browser limitations
 
-No `system()`, external programs (surf, normaliz, 4ti2, topcom), fork-based
+No `system()`, no external programs (surf, normaliz, 4ti2, topcom), no fork-based
 links or interrupt. Single thread, 4 GB memory limit. `help` requires
 Singular's info/index files, which are not packaged.
 
