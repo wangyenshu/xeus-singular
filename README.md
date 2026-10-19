@@ -70,8 +70,11 @@ message types, kernel info and error format. Changes:
 ## Browser limitations
 
 No `system()`, no external programs (surf, normaliz, 4ti2, topcom), no fork-based
-links or interrupt. Single thread, 4 GB memory limit. `help` requires
-Singular's info/index files, which are not packaged.
+links or interrupt. Single thread, 4 GB memory limit. 
+
+## Todo
+
+Pack Singular's info/index files, to make `help` work.
 
 ## License
 
