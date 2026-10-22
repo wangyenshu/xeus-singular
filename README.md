@@ -72,9 +72,11 @@ message types, kernel info and error format. Changes:
 No `system()`, no external programs (surf, normaliz, 4ti2, topcom), no fork-based
 links or interrupt. Single thread, 4 GB memory limit. 
 
-## Todo
+## Help
 
-Pack Singular's info/index files, to make `help` work.
+`help <topic>;` prints the manual entry. It needs `share/info/singular.info` and
+`share/singular/singular.idx`, installed by the emscripten-forge `singular` package
+from build 3. For a library's documentation use `help <name>_lib;`.
 
 ## License
 

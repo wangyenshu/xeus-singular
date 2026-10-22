@@ -23,6 +23,7 @@
 
 #include <Singular/libsingular.h>
 #include <Singular/cntrlc.h>
+#include <Singular/fehelp.h>
 #include <resources/feResource.h>
 
 #include "xeus-singular/xeus_singular_config.hpp"
@@ -151,6 +152,15 @@ namespace xsingular
             errorreported = 0;
             WerrorS_callback = error_callback;
             PrintS_callback = print_callback;
+
+            // help: print the manual (singular.info) in the notebook with
+            // Singular's builtin reader instead of starting an external
+            // browser, and without its pager, which waits for <RETURN>.
+            pagelength = -1;
+            if (feResource('i', 0) != NULL)
+            {
+                feHelpBrowser(const_cast<char*>("builtin"), 0);
+            }
 
             singular_return.clear();
             singular_error.clear();
